@@ -7,7 +7,7 @@ body{
 }
 
 header{
-    background-color: #1F2937;
+    background-color: #ff2800;
     height: 100px;
     display: flex;
     /* flex-direction: column; */
@@ -19,6 +19,7 @@ header{
 .header-title{
     padding-left: 36px;
     color: #f4f4f4;
+    font-size: x-large;
 }
 
 ul{
