@@ -7,7 +7,7 @@ body{
 }
 
 header{
-    background-color: #ff2800;
+    background-color: #ff2800   ;
     height: 100px;
     display: flex;
     /* flex-direction: column; */
@@ -36,3 +36,41 @@ li a {
     font-size: 18px;
     color: #E5E7EB;
   }
+
+  .inputsSection{
+      display: flex;
+      align-items: center; 
+      gap: 25px;
+      padding-bottom: 16px;
+}
+
+.leftSection, .midSection, .rightSection {
+    display: flex;
+
+    flex-direction: column;
+    gap: 16px;
+ }
+
+ .inputsSection{
+    border-bottom: 2px solid #ff2800;
+ }
+
+.etchASketchContainer{
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 8px solid #ff2800;
+    border-radius: 25px;
+    /* making it square size for containig the canvas of the EaS*/
+    width: 744px;
+    height: 744px;
+
+
+}
+/* 
+.etchASketch{
+    width: 186px;
+    height: 186px;
+    background-color: coral ;
+ } */
