@@ -59,9 +59,9 @@ li a {
     margin-top: 8px;
     display: flex;
     flex-wrap: wrap;
-    flex: 1 1 auto;
     justify-content: center;
-    border: 8px solid #ff2800;
+    border: 16px solid #ff2800;
+    padding: 2px;
     border-radius: 25px;
     /* making it square size for containig the canvas of the EaS*/
     width: 744px;

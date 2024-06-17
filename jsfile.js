@@ -14,23 +14,21 @@ btnGridInput.addEventListener("click",(e)=>
     //limits gridsize to be between 10 and 1;
     //captures value fron input
     gridSize = inputGridSize.value;
-    if (gridSize>10 || gridSize < 2){
-        gridSize = 4;
+    if (gridSize>100 || gridSize < 8){
+        gridSize = 16;
     }
 
-    tileWidth = (canvasSide-16)/gridSize;
+    tileWidth = (canvasSide-(16*2+2*2))/gridSize;
     for (let i=1;i<=gridSize*gridSize;i++){
         divEtchASketch = document.createElement("div");
         // divEtchASketch.setAttribute("class","etchASketch");
-        divEtchASketch.setAttribute("style",`width:${tileWidth}px; height:${tileWidth}px; background: #f4f4f4;`);
+        divEtchASketch.setAttribute("style",`width:${tileWidth}px; height:${tileWidth}px; background: #808080;`);
         divContainerGrid.appendChild(divEtchASketch);
 
-        divEtchASketch.addEventListener("click",(e)=> {
-            console.log(divEtchASketch);
-            console.log(e.target);
+        divEtchASketch.addEventListener("mouseover",(e)=> {
             const divNewColor = e.target;
-            divNewColor.setAttribute("style",`width:${tileWidth}px; height:${tileWidth}px; background: #46444C;`);
-            // e.target.setAttribute("style",`width:${tileWidth}px; height:${tileWidth}px; background: #46444C;`);
+            divNewColor.style.background = "#5A5A5A";
+            // divEtchASketch.style.background = "#46444C"; doesn't work
             })
         }
 })
