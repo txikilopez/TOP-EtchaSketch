@@ -59,6 +59,7 @@ li a {
     margin-top: 8px;
     display: flex;
     flex-wrap: wrap;
+    flex: 1 1 auto;
     justify-content: center;
     border: 8px solid #ff2800;
     border-radius: 25px;
