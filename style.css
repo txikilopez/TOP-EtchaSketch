@@ -66,12 +66,23 @@ li a {
     /* making it square size for containig the canvas of the EaS*/
     width: 744px;
     height: 744px;
-
-
 }
-/* 
-.etchASketch{
-    width: 186px;
-    height: 186px;
-    background-color: coral ;
- } */
+
+
+
+#btnG {
+    background-color:#ff2800;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#btnG:hover{
+    background-color: coral;
+}
