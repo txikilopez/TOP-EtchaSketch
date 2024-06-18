@@ -6,22 +6,23 @@ const canvasSide = divContainerGrid.offsetWidth;
 let gridSize = 0;
 let tileWidth = 0;
 
+
 btnGridInput.addEventListener("click",(e)=>
 {
     gridSize = getScreenSize();
-    console.log(gridSize);
-    
     tileWidth = (canvasSide-(16*2+2*2))/gridSize;
+
+    divContainerGrid.innerHTML='';
+
     for (let i=1;i<=gridSize*gridSize;i++){
         divEtchASketch = document.createElement("div");
-        // divEtchASketch.setAttribute("class","etchASketch");
         divEtchASketch.setAttribute("style",`width:${tileWidth}px; height:${tileWidth}px; background: #808080;`);
         divContainerGrid.appendChild(divEtchASketch);
-
+        
         divEtchASketch.addEventListener("mouseover",(e)=> {
             const divNewColor = e.target;
             divNewColor.style.background = "#5A5A5A";
-            // divEtchASketch.style.background = "#46444C"; doesn't work
+            // divEtchASketch.style.background = "#5A5A5A"; doesn't work
             })
         }
 })
