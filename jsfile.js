@@ -1,9 +1,7 @@
 
-
 const inputGridSize = document.querySelector("#gridSize");
 const btnGridInput = document.querySelector("#btnG");
 const divContainerGrid = document.querySelector(".etchASketchContainer");
-
 const canvasSide = divContainerGrid.offsetWidth;
 // delete default of 4 after getting the hover correct
 let gridSize = 0;
@@ -11,13 +9,9 @@ let tileWidth = 0;
 
 btnGridInput.addEventListener("click",(e)=>
 {
-    //limits gridsize to be between 10 and 1;
-    //captures value fron input
-    gridSize = inputGridSize.value;
-    if (gridSize>100 || gridSize < 8){
-        gridSize = 16;
-    }
-
+    gridSize = getScreenSize();
+    console.log(gridSize);
+    
     tileWidth = (canvasSide-(16*2+2*2))/gridSize;
     for (let i=1;i<=gridSize*gridSize;i++){
         divEtchASketch = document.createElement("div");
@@ -32,4 +26,11 @@ btnGridInput.addEventListener("click",(e)=>
             })
         }
 })
-
+//untested
+function getScreenSize(){
+    let squares = +prompt("How big you want the grid to be (a x a)");
+    if (typeof (squares) == "string" || !Number.isInteger(squares) || squares > 100 || squares <1){
+        alert("Positive integer under 100 expected, default grid of 16 squares created");
+        squares = 16;}
+    return +squares;
+}
