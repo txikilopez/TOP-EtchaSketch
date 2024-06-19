@@ -29,13 +29,14 @@ function getScreenSize(){
 
 function createCanvas(gridSizeInput,tiles,counter){
     divEtchASketch = document.createElement("div");
-    divEtchASketch.setAttribute("style",`width:${tiles}px; height:${tiles}px; background: #808080;`);
+    divEtchASketch.setAttribute("style",`width:${tiles}px; height:${tiles}px; background: #DEDEDE;`);
     // divEtchASketch.setAttribute("class","etchASketchPixel"+counter+" square");
-    divEtchASketch.style.opacity = 0; // delete if we dont' want the opacity feature
+
     divContainerGrid.appendChild(divEtchASketch);      
     
     divEtchASketch.addEventListener("mouseover",(e)=> {
         const divNewColor = e.target;
+        divNewColor.style.opacity = 0; // delete if we dont' want the opacity feature
         // const divNewColor = document.querySelector(`.etchASketchPixel${i}`)
         let rColor = 255*(Math.random())+1;
         let gColor = 255*(Math.random())+1;
